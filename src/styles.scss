@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root {
+  --text-dark: rgba(0, 0, 0, 0.80);
+  --text-dark-2: rgba(0, 0, 0, 0.60);
+  --text-dark-3: rgba(0, 0, 0, 0.40);
+
+  --text-white: rgba(255, 255, 255, 0.80);
+  --text-white-2: rgba(255, 255, 255, 0.60);
+  --text-white-3: rgba(255, 255, 255, 0.40);
+
+  --dark-surface: #121212;
+  --dark-surface-2: #242424;
+  --dark-surface-3: #323232;
+  --dark-surface-4: #404040;
+
+  --primary: #63B5F8;
+  --primary-dark: #5793e5;
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+body {
+  margin: 0;
+  background: var(--dark-surface-2);
+  font-family: 'Raleway', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Loader
+
+.loader-container {
+  padding-left: 20vw;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(8, 102, 178, 0.2);
+  border-right: 1.1em solid rgba(8, 102, 178, 0.2);
+  border-bottom: 1.1em solid rgba(8, 102, 178, 0.2);
+  border-left: 1.1em solid #0866b2;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .loader-container {
+    padding-left: 0;
+  }
+}

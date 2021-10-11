@@ -1,0 +1,153 @@
+.circle {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  z-index: 99;
+
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  .button {
+    color: var(--text-dark);
+  }
+}
+
+.circle-no-elevated {
+  background: var(--primary);
+  transition: 300ms ease;
+}
+
+.circle-no-elevated:hover {
+  background: var(--primary-dark);
+}
+
+.circle-elevated {
+  background: var(--dark-surface-3);
+  box-shadow: var(--shadow-2);
+  transition: 300ms ease;
+
+  .button {
+    color: var(--text-white);
+  }
+}
+
+.circle-elevated:hover {
+  background: var(--dark-surface-4);
+  box-shadow: var(--shadow-3);
+}
+
+nav {
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 98;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: var(--dark-surface-2);
+}
+
+.rounded-image {
+  width: 8em;
+  height: 8em;
+
+  margin-top: 2em;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+  }
+}
+
+h1 {
+  margin: 2em 1em 0;
+
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+
+  color: var(--text-white);
+}
+
+h2 {
+  margin: 0.5em 1em 2em;
+
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+
+  color: var(--text-white-2);
+}
+
+.menu {
+  font-size: larger;
+  font-weight: normal;
+  text-align: center;
+
+  .separator {
+    height: 4rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  .item {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid var(--text-white-3);
+    border-radius: 1px;
+
+    color: var(--text-white-3);
+    cursor: pointer;
+
+    transition: 500ms ease-out;
+
+    a {
+      color: var(--text-white-3);
+      text-decoration: none;
+
+      transition: 500ms ease-out;
+    }
+  }
+
+  .item:hover {
+    color: var(--text-white);
+    border-bottom: 2px solid var(--text-white-2);
+
+    a {
+      color: var(--text-white);
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+

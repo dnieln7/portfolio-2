@@ -1,0 +1,11 @@
+.hide {
+  opacity: 0;
+  cursor: none;
+}
+
+@media (max-width: 800px) {
+  .hide {
+    opacity: 1;
+    cursor: pointer;
+  }
+}

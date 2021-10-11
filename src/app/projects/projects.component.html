@@ -1,0 +1,30 @@
+<div class="row">
+  <app-side-bar *ngIf="showSideBar"></app-side-bar>
+
+  <div *ngIf="projects.length == 0" class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <div *ngIf="projects.length != 0" class="root">
+    <h1>Projects</h1>
+    <h3>
+      In this section you will find some of the projects i made. Some of them are from school or competitions, other are
+      ideas of my own and the rest are from my work history.
+    </h3>
+
+    <div class="card-grid">
+      <div *ngFor="let project of projects" class="card" routerLink="/projects/{{project.id}}">
+        <img alt="thumbnail" src="{{project.thumbnail}}">
+        <div class="card-body">
+          <p class="title">{{project.name}}</p>
+          <p class="content">{{project.summary}}</p>
+        </div>
+        <div class="card-footer">
+          <span *ngFor="let tag of project.tags" class="tag">{{tag}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 15vh"></div>
+  </div>
+</div>

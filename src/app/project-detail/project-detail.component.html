@@ -1,0 +1,82 @@
+<div class="row">
+  <app-side-bar *ngIf="showSideBar"></app-side-bar>
+
+  <div *ngIf="project == null" class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <div *ngIf="project != null" class="root">
+    <h1 class="margin-from-left">{{project.name}}</h1>
+
+    <div class="project-summary">
+      <p>{{project.summary}}</p>
+    </div>
+
+    <gallery
+      [autoPlay]="true"
+      [counter]="false"
+      [dots]="true"
+      [items]="images"
+      [loop]="true"
+      [nav]="false"
+      [thumb]="false"
+      class="project-carousel"
+      dotsPosition="bottom"
+      imageSize="contain">
+    </gallery>
+
+    <div class="project-links">
+      <h2>Links</h2>
+      <a *ngIf="project.androidUrl !== 'N/A'" class="link" href="{{project.androidUrl}}" target="_blank">
+        <span class="material-icons-round icon">android</span>
+        Android app
+      </a>
+      <a *ngIf="project.androidGit !== 'N/A'" class="link" href="{{project.androidGit}}" target="_blank">
+        <span class="material-icons-round icon">developer_mode</span>
+        Android app source code
+      </a>
+      <a *ngIf="project.webUrl !== 'N/A'" class="link" href="{{project.webUrl}}" target="_blank">
+        <span class="material-icons-round icon">public</span>
+        Web app
+      </a>
+      <a *ngIf="project.webGit !== 'N/A'" class="link" href="{{project.webGit}}" target="_blank">
+        <span class="material-icons-round icon">code</span>
+        Web app source code
+      </a>
+      <a *ngIf="project.programUrl !== 'N/A'" class="link" href="{{project.programUrl}}" target="_blank">
+        <span class="material-icons-round icon">desktop_windows</span>
+        Program
+      </a>
+      <a *ngIf="project.programGit !== 'N/A'" class="link" href="{{project.programGit}}" target="_blank">
+        <span class="material-icons-round icon">code</span>
+        Program source code
+      </a>
+    </div>
+
+    <div class="project-duration">
+      <h2>Duration</h2>
+      <p>{{project.duration}}</p>
+    </div>
+
+    <div class="project-description">
+      <h2>Description</h2>
+      <p>{{project.description}}</p>
+    </div>
+
+    <div class="project-features">
+      <h2>Features</h2>
+      <ul>
+        <li *ngFor="let feature of project.features" class="body check">{{feature}}</li>
+      </ul>
+    </div>
+
+    <div class="project-features margin-from-left">
+      <h2>Technologies</h2>
+      <ul>
+        <li *ngFor="let technology of project.technologies" class="body arrow">{{technology}}</li>
+      </ul>
+    </div>
+
+    <div style="height: 15vh"></div>
+  </div>
+</div>

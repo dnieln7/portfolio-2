@@ -1,0 +1,265 @@
+.banner-container {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--dark-surface);
+
+    /*
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/banner-flowers.jpg");
+    background-size: 100% 100%;
+    */
+
+    height: 100vh;
+
+    span {
+      font-size: x-large;
+    }
+
+    .social {
+      width: 12em;
+      padding: 0.75em 0.50em 0.50em 0.50em;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      background: var(--primary);
+      border-radius: 5px;
+
+      img {
+        height: 2em;
+        cursor: pointer;
+      }
+
+      img:hover {
+        height: 1.75em;
+      }
+    }
+  }
+}
+
+.content-container {
+  padding: 1rem;
+
+  .title {
+    color: var(--text-white);
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+  }
+
+  .subtitle {
+    color: var(--text-white-2);
+    font-size: larger;
+    margin: 0 0 2em;
+  }
+
+  .skills-container {
+    background: var(--dark-surface-3);
+
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+
+    box-shadow: var(--shadow);
+
+    .skills-header {
+      padding: 1em;
+
+      .skill-title {
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+        font-size: larger;
+        color: var(--primary);
+      }
+    }
+
+    .skills {
+      padding: 1em 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .experience {
+    margin-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+
+    box-shadow: var(--shadow);
+    background: var(--dark-surface-3);
+
+    .exp-header {
+      padding: 1em;
+      margin-bottom: 0.5em;
+      border-bottom: 2px dashed var(--text-white-3);
+
+      p {
+        margin: 0;
+        font-weight: normal;
+        font-size: x-large;
+        color: var(--primary);
+      }
+    }
+
+    .exp-item {
+      padding: 0.5em;
+
+      .exp-title-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 1em;
+
+        .exp-title {
+          font-size: large;
+          color: var(--text-white);
+          margin: 0;
+        }
+
+        .exp-date {
+          font-size: medium;
+          color: var(--text-white-3);
+          margin: 0;
+        }
+      }
+
+      .exp-body {
+        font-size: medium;
+        color: var(--text-white-2);
+        margin: 0 0 0.5em;
+      }
+
+      .exp-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        .exp-link {
+          display: flex;
+          align-items: center;
+          margin-left: 0.5em;
+
+          a {
+            font-size: small;
+            color: var(--primary);
+            text-decoration: none;
+          }
+
+          a:hover {
+            color: var(--primary-dark);
+          }
+
+          span {
+            margin-left: 0.25em;
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.chip {
+  width: auto;
+  height: auto;
+  background: var(--primary);
+  color: var(--text-dark);
+  padding: 0.4em 1em;
+  border-radius: 5px;
+  text-align: center;
+  font-size: medium;
+}
+
+.chip-text {
+  width: auto;
+  height: auto;
+  color: var(--text-white);
+  padding: 0.4em 1em;
+  text-align: center;
+  font-size: medium;
+}
+
+@media (max-width: 800px) {
+  .banner-container {
+    .banner {
+      background-size: auto 100%;
+
+      span {
+        margin-left: 1em;
+        margin-right: 1em;
+
+        font-size: large;
+      }
+
+      .social {
+        width: 10em;
+        padding: 0.50em 0.25em 0.25em 0.25em;
+
+        img {
+          height: 1.5em;
+        }
+
+        img:hover {
+          height: 1.25em;
+        }
+      }
+    }
+  }
+
+  .content-container {
+    .title {
+      font-size: x-large;
+    }
+
+    .subtitle {
+      font-size: large;
+    }
+
+    .skills-container {
+      .skills-header {
+        padding: 1em 1em 0;
+
+        .skill-title {
+          font-size: large;
+        }
+      }
+
+      .skills {
+        padding: 0.5em 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .experience {
+      margin-top: 1em;
+
+      .exp-header {
+        padding: 0.5em;
+        font-size: larger;
+
+        .exp-circle {
+          font-size: x-large;
+        }
+      }
+    }
+  }
+
+  .chip-text {
+    font-size: small;
+  }
+}
