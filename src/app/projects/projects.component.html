@@ -13,7 +13,7 @@
     </h3>
 
     <div class="card-grid">
-      <div *ngFor="let project of projects" class="card" routerLink="/projects/{{project.id}}">
+      <div *ngFor="let project of projects" class="card border-custom" routerLink="/projects/{{project.id}}">
         <img alt="thumbnail" src="{{project.thumbnail}}">
         <div class="card-body">
           <p class="title">{{project.name}}</p>
